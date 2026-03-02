@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html lang="fi">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Tilat | Taipaleen leirikeskus</title>
+
+<style>
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    margin: 0;
+    padding: 0;
+    background-color: #f8f8f8;
+}
+.container {
+    max-width: 1000px;
+    margin: 40px auto;
+    padding: 20px;
+    background: #ffffff;
+}
+h1, h2 {
+    color: #2c3e50;
+}
+.section {
+    margin-bottom: 40px;
+}
+.price {
+    font-weight: bold;
+}
+.contact {
+    background: #f0f4f7;
+    padding: 20px;
+    margin-top: 40px;
+}
+button, input[type="submit"], input[type="reset"] {
+    padding: 10px 15px;
+    background: #2c3e50;
+    color: #fff;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+button:hover, input[type="submit"]:hover, input[type="reset"]:hover {
+    background: #1a242f;
+}
+form {
+    margin-top: 20px;
+    padding: 20px;
+    background: #f0f4f7;
+    display: none;
+}
+form div {
+    margin-bottom: 15px;
+}
+input, select {
+    width: 100%;
+    padding: 8px;
+    margin-top: 5px;
+}
+.success-message {
+    display: none;
+    margin-top: 20px;
+    padding: 15px;
+    background-color: #d4edda;
+    color: #155724;
+    border-radius: 4px;
+}
+.error {
+    color: red;
+    font-size: 0.9em;
+}
+</style>
+</head>
+
+<body>
+
+<div class="container">
+<h1>Tilat</h1>
+<p>Meiltä löytyy vuokrattavia tiloja eri tarpeisiin – juhliin, kokouksiin ja koulutuksiin.</p>
+
+<div class="section">
+<h2>Juhlatila</h2>
+<p>Ruokasali max. 80 hengelle.</p>
+<p class="price">Kesäkausi: 50 € / tunti | Talvikausi: 35 € / tunti</p>
+</div>
+
+<div class="section">
+<h2>Kokoustila</h2>
+<p>Max. 40 henkilöä.</p>
+<p class="price">29 € / tunti</p>
+</div>
+
+<div class="section">
+<h2>Luokkahuone</h2>
+<p>Max. 28 henkilöä.</p>
+<p class="price">25 € / tunti</p>
+</div>
+
+<div class="section">
+<button onclick="toggleForm()">Tiedustele tilojen vuokraamisesta</button>
+
+<form id="bookingForm">
+<div>
+<label>Nimi</label>
+<input type="text" id="name" required>
+</div>
+
+<div>
+<label>Puhelinnumero</label>
+<input type="tel" id="phone" required>
+</div>
+
+<div>
+<label>Sähköpostiosoite</label>
+<input type="email" id="email" required>
+</div>
+
+<div>
+<label>Tiedusteltava tila</label>
+<select id="room" required>
+<option value="">Valitse tila</option>
+<option>Juhlatila</option>
+<option>Kokoushuone</option>
+<option>Luokkahuone</option>
+</select>
+</div>
+
+<div>
+<label>Päivämäärä</label>
+<input type="date" id="date" required>
+</div>
+
+<div>
+<label>Alkamiskellonaika (07:00–20:00)</label>
+<input type="time" id="startTime" required>
+</div>
+
+<div>
+<label>Loppumiskellonaika (08:00–22:00)</label>
+<input type="time" id="endTime" required>
+</div>
+
+<div class="error" id="errorMessage"></div>
+
+<div>
+<input type="submit" value="Lähetä">
+<input type="reset" value="Tyhjennä">
+</div>
+</form>
+
+<div class="success-message" id="successMessage">
+Lomake lähetetty. Tarkistamme tilojen saatavuuden ja vastaamme lähetettyyn sähköpostiosoitteeseen mahdollisimman pian.
+</div>
+</div>
+
+<div class="contact">
+<h2>Yhteystiedot</h2>
+<p>
+Taipaleen leirikeskus<br>
+Levälahdentie 28<br>
+34260 Teisko<br>
+taival.info@leirikeskustaival.fi<br>
+0400 171 177
+</p>
+</div>
+
+</div>
+
+<script>
+function toggleForm() {
+    const form = document.getElementById("bookingForm");
+    form.style.display = form.style.display === "none" || form.style.display === "" ? "block" : "none";
+}
+
+document.getElementById("bookingForm").addEventListener("submit", function(event) {
+    event.preventDefault();
+
+    const start = document.getElementById("startTime").value;
+    const end = document.getElementById("endTime").value;
+    const errorMessage = document.getElementById("errorMessage");
+
+    errorMessage.textContent = "";
+
+    if (!start || !end) return;
+
+    if (start < "07:00" || start > "20:00") {
+        errorMessage.textContent = "Alkamisajan tulee olla välillä 07:00–20:00.";
+        return;
+    }
+
+    if (end < "08:00" || end > "22:00") {
+        errorMessage.textContent = "Loppumisajan tulee olla välillä 08:00–22:00.";
+        return;
+    }
+
+    if (end <= start) {
+        errorMessage.textContent = "Loppumisajan tulee olla alkamisaikaa myöhemmin.";
+        return;
+    }
+
+    document.getElementById("bookingForm").reset();
+    document.getElementById("bookingForm").style.display = "none";
+    document.getElementById("successMessage").style.display = "block";
+});
+</script>
+
+</body>
+</html>

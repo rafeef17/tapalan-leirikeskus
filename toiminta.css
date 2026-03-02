@@ -1,16 +1,19 @@
 *{
     margin: 0;
-    padding: 0;
     box-sizing: border-box;
 }
 h1{
-    font-size: 40px;
+    font-size: 50px;
     font-family: 'Times New Roman', Times, serif;
     text-align: center;
-    margin-bottom: 20px;
-    background-color: rgba(60, 115, 5);
-    color: white;
+    color:white;
 }
+header{
+    background-image: url(leiri.jpg);
+    height: 600px;
+    background-size: cover;
+}
+
 nav {
     position: absolute;
     left: 40px;
@@ -19,6 +22,44 @@ nav {
     border-radius: 20px;
     top: 430px;
 }
+nav ul{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+}
+
+nav li {
+    list-style: none;
+    margin: 10px;
+}
+nav a{
+    color: white;
+    text-decoration: none;
+    font-size: 18px;
+}
+
+nav a:hover {
+    text-decoration: underline;
+}
+
+
+.koti {
+    width: 40px;
+    position: relative;
+    top: -25px;
+    left: -10px;
+}
+
+
+
+footer {
+    text-align: center;
+    padding: 20px;
+    font-size: x-large;
+    color: rgba(60, 115, 5);
+}
+
 .navs{
     display: flex;
     margin-bottom: 60px;
@@ -49,27 +90,63 @@ nav {
     align-items: center;
     margin-top: -10px;
 }
-li {
-    list-style: none;
-    margin: 10px;
-}
-nav a{
-    color: white;
-    text-decoration: none;
-    font-size: 18px;
-}
 
-
-
-
-.koti {
-    width: 40px;
-    position: relative;
-    top: -5px;
-    left: -5px;
-}
 main {
     padding: 40px;
     font-family: Arial, sans-serif;
     line-height: 1.6;
-}
+    box-sizing: border-box;
+    margin-bottom: 20px;
+    background-color: rgb(255, 255, 255);
+    top:-90px;
+    position: relative;
+    font-size: large;
+    margin-left: 40px;
+   margin-right: 40px;
+   text-align: center;
+   margin-bottom: 2rem;
+   padding-bottom: 1rem;
+   border-bottom: 1px solid #ddd;
+} 
+ h3{
+    margin-top: 30px;
+    padding-top: 1rem;
+    border-top: 1px solid #ddd;
+  }
+button {
+    background-color:rgba(60, 115, 5);
+    color: #fff;
+    border: none;
+    cursor: pointer;
+  }
+  button:hover {
+    background-color: green;
+  }
+
+  .hidden{
+    display: none;
+  }
+  .esiintyjat{
+    display: flex;
+    flex-direction: column;
+  }
+    .vene{
+        margin-top: 20px;
+        max-width: 100%;
+        height: auto;
+        border-radius: 10px;
+    }
+    .kylpyla{
+        margin-top: 20px;
+        max-width: 100%;
+        height: auto;
+        border-radius: 10px;
+    }
+    .luontoretket{
+        margin-top: 20px;
+        max-width: 100%;
+        height: auto;
+        border-radius: 10px;
+    }
+
+

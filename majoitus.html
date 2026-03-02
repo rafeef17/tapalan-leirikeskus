@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Majoitus</title>
+    <link rel="stylesheet" href="majoitus.css">
+</head>
+<body>
+    <header>
+        <h1>Taipaleen leirikeskus</h1>
+    
+        <nav>
+            <ul>
+                <li class="koti-li">
+                    <a href="index.html">
+                        <img src="house.png" alt="koti" class="koti">
+                    </a>
+                </li>
+            
+                <li class="nav1">
+                    <a href="toiminta.html">Toiminta</a><br>
+                    <a href="majoitus.html">Majoitus</a>
+                </li>
+            
+                <li class="nav2">
+                    <a href="Ruokailu.html">Ruokailu</a><br>
+                    <a href="Tilat.html">Tilat</a>
+                </li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <div id="global-message"></div>
+
+        <h2>Majoitus</h2>
+        <p>Meillä voit vuokrata mökin, teltan, asuntoauto- tai vaunupaikan tai huoneen päärakennukselta.</p>
+        
+        <h3>Mökit</h3>
+        <p>Mökkejä on kahta kokoa. Pieniä neljän hengen mökkejä löytyy kuusi kappaletta. 
+            Niihin voi pedata myös yhden lisävuoteen sohvalle. 
+            Suurempia kahdeksan hengen mökkejä on kymmenen kappaletta.</p>
+
+            <p>Pienen mökin vuorokausihinta on 70 €. <button id="pieni">Vuokraa pieni mökki tästä.</button></p>
+
+            <form id="PIENI" class="hidden">
+                <h2>Vuokrata pieni mökki</h2>
+                <label for="name">Nimi:</label>
+                <input type="text" id="name" name="name" required>
+
+                <label for="email">Sähköpostiosoite:</label>
+                <input type="email" id="email" name="email" required>
+
+                <label for="phone">Puhelinnumero:</label>
+                <input type="tel" id="phone" name="phone" required>
+
+                <label for="arrival-small">Saapumispäivä</label>
+                <input id="arrival-small" name="arrival" type="date" required />
+                
+                <label for="departure-small">Lähtöpäivä</label>
+                <input id="departure-small" name="departure" type="date" required />
+                
+
+                <button type="submit">Lähetä</button>
+                <button type="reset">Tyhjennä</button>
+            </form>
+
+            <p>Ison mökin vuorokausihinta on 100 €. <button id="iso">Vuokraa suuri mökki tästä.</button></p>
+            <form id="ISO" class="hidden">
+                <h2>Vuokrata suuri mökki</h2>
+                <label for="name">Nimi:</label>
+                <input type="text" id="name" name="name" required>
+
+                <label for="email">Sähköpostiosoite:</label>
+                <input type="email" id="email" name="email" required>
+
+                <label for="phone">Puhelinnumero:</label>
+                <input type="tel" id="phone" name="phone" required>
+
+                <label for="arrival-big">Saapumispäivä</label>
+                <input id="arrival-big" name="arrival" type="date" required />
+                
+                <label for="departure-big">Lähtöpäivä</label>
+                <input id="departure-big" name="departure" type="date" required />
+                
+
+                <button type="submit">Lähetä</button>
+                <button type="reset">Tyhjennä</button>
+            </form>
+            <img src="mökki.jpg" alt="Mökki" class="mökki">
+
+
+            <h3>Teltat</h3>
+            <p>Päärakennuksessamme on hotellihuoneita 30 kappaletta. 
+                Näistä 20 on kahden hengen huoneita ja 10 neljän hengen huoneita.
+                Jokaisessa huoneessa on oma kylpyhuone ja pieni keittiö. 
+                Huoneisiin on mahdollista levittää sohvasta yksi lisävuode.
+                Aamiainen kuuluu huoneiden hintaan. 
+                Kahden hengen huoneen vuorokausihinta on 90 €
+                ja neljän hengen huoneen vuorokausihinta on 130 €.</p>
+                <button id="teltat">Varaa huone tästä.</button>
+                <form id="TELTAT" class="hidden">
+                    <h2>Vuokrata telttapaikka</h2>
+                    <label for="name">Nimi:</label>
+                    <input type="text" id="name" name="name" required>
+
+                    <label for="email">Sähköpostiosoite:</label>
+                    <input type="email" id="email" name="email" required>
+
+                    <label for="phone">Puhelinnumero:</label>
+                    <input type="tel" id="phone" name="phone" required>
+
+                    <label for="arrival-tent">Saapumispäivä</label>
+                    <input id="arrival-tent" name="arrival" type="date" required />
+                    
+                    <label for="departure-tent">Lähtöpäivä</label>
+                    <input id="departure-tent" name="departure" type="date" required />
+
+
+
+                    <button type="submit">Lähetä</button>
+                    <button type="reset">Tyhjennä</button>
+
+
+                </form>
+                <img src="Teltat.jpg" alt="teltat" class="mökki">
+
+
+                <h3>Asuntoautopaikat</h3>
+<p>Asuntoautoille- ja vaunuille on joukko omia paikkoja, 
+    joilla on jaettu huoltorakennus.
+     Paikkoja löytyy kahdellekymmenelle kulkuneuvolle.
+      Paikan vuorokausivuokra on 20 € läpi vuoden.</p>
+      <button id="asuntoauto">Varaa asuntoautopaikka tästä</button>
+      <form id="ASUNTOAUTO" class="hidden">
+        <h2>Vuokrata asuntoautopaikka</h2>
+        <label for="name">Nimi:</label>
+        <input type="text" id="name" name="name" required>
+
+        <label for="email">Sähköpostiosoite:</label>
+        <input type="email" id="email" name="email" required>
+
+        <label for="phone">Puhelinnumero:</label>
+        <input type="tel" id="phone" name="phone" required>
+
+        <label for="arrival-caravan">Saapumispäivä</label>
+        <input id="arrival-caravan" name="arrival" type="date" required />
+        
+        <label for="departure-caravan">Lähtöpäivä</label>
+        <input id="departure-caravan" name="departure" type="date" required />
+
+        
+
+        <button type="submit">Lähetä</button>
+        <button type="reset">Tyhjennä</button>
+
+
+    </form>
+      <img src="Asuntoautopaikat.webp" alt="asuntoauto" class="auto">
+
+      <h3>Hotellimajoitus</h3>
+      <p>Päärakennuksessamme on hotellihuoneita 30 kappaletta. 
+        Näistä 20 on kahden hengen huoneita ja 10 neljän hengen huoneita. 
+        Jokaisessa huoneessa on oma kylpyhuone ja pieni keittiö. Huoneisiin on mahdollista levittää sohvasta yksi lisävuode.
+         Aamiainen kuuluu huoneiden hintaan. 
+        Kahden hengen huoneen vuorokausihinta on 90 € ja neljän hengen huoneen vuorokausihinta on 130 €.</p>
+        <button id="hotelli">Varaa huone tästä.</button>
+        <form id="HOTELLI" class="hidden">
+            <h2>Vuokrata hotellihuone</h2>
+            <label for="name">Nimi:</label>
+            <input type="text" id="name" name="name" required>
+
+            <label for="email">Sähköpostiosoite:</label>
+            <input type="email" id="email" name="email" required>
+
+            <label for="phone">Puhelinnumero:</label>
+            <input type="tel" id="phone" name="phone" required>
+
+            <label for="arrival-hotel">Saapumispäivä</label>
+            <input id="arrival-hotel" name="arrival" type="date" required />
+            
+            <label for="departure-hotel">Lähtöpäivä</label>
+            <input id="departure-hotel" name="departure" type="date" required />
+
+            <label><input type="radio" name="room-type" value="2">2 hengen</label>
+            <label><input type="radio" name="room-type" value="4">4 hengen</label>
+
+            <button type="submit">Lähetä</button>
+            <button type="reset">Tyhjennä</button>
+
+
+        </form>
+        <img src="hotelli.webp" alt="hotelli" class="hotelli">
+
+
+    </main>
+    <script src="majoitus.js"></script>
+    <footer>
+        <p>
+            Levälahdentie 28, 34260 Teisko<br>
+            taival.info@leirikeskustaival.fi<br>
+            040 017 1177<br>
+            Seuraa meitä Facebookissa ja Instagramissa
+        </p>
+    </footer>
+</body>
+</html>

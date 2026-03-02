@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="fi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ruokailu</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="Ruokailu.css">
+</head>
+<body>
+
+<header>
+    <h1>Taipaleen leirikeskus</h1>
+
+    <nav>
+        <ul>
+            <li class="koti-li">
+                <a href="index.html">
+                    <img src="house.png" alt="koti" class="koti">
+                </a>
+            </li>
+        
+            <li class="nav1">
+                <a href="toiminta.html">Toiminta</a><br>
+                <a href="majoitus.html">Majoitus</a>
+            </li>
+        
+            <li class="nav2">
+                <a href="Ruokailu.html">Ruokailu</a><br>
+                <a href="Tilat.html">Tilat</a>
+            </li>
+        </ul>
+    </nav>
+</header>
+
+ <main>
+    <h2>Ruokailu Taipaleen leirikeskuksessa</h2>
+    <p>Leirintäkeskuksen päärakennuksessa toimii viihtyisä ravintola sekä erillinen tilausravintolapuoli.</p>
+
+    <h3>🌅 Aamiainen (klo 7–10)</h3>
+    <p>Ravintola Taival tarjoaa monipuolisen aamiaisen joka aamu.</p>
+    <ul>
+        <li>Aikuiset: <span class="price">8 €</span></li>
+        <li>Kouluikäiset lapset: <span class="price">4 €</span></li>
+        <li>Alle kouluikäiset: <span class="price">ilmaiseksi huoltajan seurassa</span></li>
+    </ul>
+
+    <h3>☀️ Kesäkauden lounas (klo 11–14)</h3>
+    <p>Kesäisin tarjoamme maukkaan ja kesäisen lounaan noutopöydästä.</p>
+    <p>Huomioimme yleisimmät ruokarajoitukset. Kysy harvinaisemmista allergeeneista henkilökunnaltamme.</p>
+    <ul>
+        <li>Aikuiset: <span class="price">12,90 €</span></li>
+        <li>Kouluikäiset lapset: <span class="price">8,90 €</span></li>
+        <li>Alle kouluikäiset: <span class="price">4,90 €</span></li>
+    </ul>
+
+    <h3>🌇 Kesäkauden illallinen (klo 17–20)</h3>
+    <p>Kesäisin tarjoamme myös illallisen noutopöydästä.</p>
+    <ul>
+        <li>Aikuiset: <span class="price">14,90 €</span></li>
+        <li>Kouluikäiset lapset: <span class="price">9,90 €</span></li>
+        <li>Alle kouluikäiset: <span class="price">4,90 €</span></li>
+    </ul>
+
+    <h3>👥 Tilausruokailut ja pitopalvelu</h3>
+    <p>Muina aikoina ruokailu on tilattavissa vähintään 6 hengen ryhmille ruokalistamme mukaisesti.</p>
+    <p>Tilaus tulee tehdä vähintään 3 vuorokautta aikaisemmin.</p>
+    <p>Tarjoamme myös pitopalvelun kaikkiin tiloissamme järjestettäviin juhliin.</p>
+
+
+    <div id="demo" class="carousel slide" data-bs-ride="carousel">
+
+        <!-- Indicators/dots -->
+        <div class="carousel-indicators">
+          <button type="button" data-bs-target="#demo" data-bs-slide-to="0" class="active"></button>
+          <button type="button" data-bs-target="#demo" data-bs-slide-to="1"></button>
+          <button type="button" data-bs-target="#demo" data-bs-slide-to="2"></button>
+        </div>
+      
+        <!-- The slideshow/carousel -->
+        <div class="carousel-inner">
+            <div class="carousel-item active">
+              <img src="aamiainen.webp" class="d-block w-100">
+            </div>
+          
+            <div class="carousel-item">
+              <img src="lounas.jpg" class="d-block w-100">
+            </div>
+          
+            <div class="carousel-item">
+              <img src="illallinen.png" class="d-block w-100">
+            </div>
+          
+      
+        <!-- Left and right controls/icons -->
+        <button class="carousel-control-prev" type="button" data-bs-target="#demo" data-bs-slide="prev">
+          <span class="carousel-control-prev-icon"></span>
+        </button>
+        <button class="carousel-control-next" type="button" data-bs-target="#demo" data-bs-slide="next">
+          <span class="carousel-control-next-icon"></span>
+        </button>
+      </div>
+ </main>
+ <footer>
+    <p>
+        Levälahdentie 28, 34260 Teisko<br>
+        taival.info@leirikeskustaival.fi<br>
+        040 017 1177<br>
+        Seuraa meitä Facebookissa ja Instagramissa
+    </p>
+</footer>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
